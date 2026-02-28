@@ -1,0 +1,47 @@
+<div class="login-container">
+
+  <div class="login-card">
+    <h2>{{ isRegisterMode ? 'Create Account' : 'Welcome Back' }}</h2>
+    <p class="subtitle">
+      {{ isRegisterMode ? 'Register to create an account' : 'Please login to your account' }}
+    </p>
+
+    <div class="input-group">
+      <input 
+        type="email"
+        placeholder="Enter Email"
+        [(ngModel)]="email">
+    </div>
+
+    <div class="input-group">
+      <input 
+        type="password"
+        placeholder="Enter Password"
+        [(ngModel)]="password">
+    </div>
+
+    <!-- Login Button -->
+    <button *ngIf="!isRegisterMode" (click)="login()">
+      Login
+    </button>
+
+    <!-- Register Button -->
+    <button *ngIf="isRegisterMode" (click)="register()">
+      Register
+    </button>
+
+    <!-- Toggle Link -->
+    <div class="toggle-link" (click)="toggleMode()">
+      {{ isRegisterMode ? 'Already have an account? Login' : 'Don’t have an account? Register' }}
+    </div>
+
+    <!-- Message -->
+    <div class="message" 
+         [ngClass]="{'success': messageType === 'success', 
+                     'error': messageType === 'error'}">
+      {{ message }}
+    </div>
+
+  </div>
+
+</div>
