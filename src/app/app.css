@@ -96,3 +96,10 @@ button:hover {
   background: #f8d7da;
   color: #721c24;
 }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); /* Light Purple Pastel */
+  height: 100vh;
+}

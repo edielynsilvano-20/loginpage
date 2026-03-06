@@ -1,25 +1,21 @@
-<div class="dashboard-shell">
-  <!-- Sidebar Navigation -->
+<div class="dashboard-wrapper">
   <nav class="sidebar">
-    <div class="sidebar-header">
-      <h2>Dashboard</h2>
-    </div>
-    <ul class="nav-links">
-      <li><a routerLink="/admin">Overview</a></li>
-      <li><a routerLink="/user-management">Management</a></li>
-      <li class="spacer"></li>
-      <li><a routerLink="/login" class="logout">Logout</a></li>
+    <div class="logo">PurpleDash</div>
+    <ul>
+      <li><a routerLink="/admin" class="active">Overview</a></li>
+      <li><a routerLink="/user">Profile</a></li>
+      <li class="logout"><a routerLink="/login">Logout</a></li>
     </ul>
   </nav>
 
-  <!-- Main Workspace Area -->
-  <main class="workspace">
-    <header class="top-bar">
-      <h1>Admin Workspace</h1>
+  <main class="main-content">
+    <header>
+      <h1>Dashboard Overview</h1>
     </header>
-    <section class="content-area">
-      <!-- Your dashboard widgets/cards go here -->
-      <p>Welcome to your customized dashboard.</p>
-    </section>
+    <div class="stats-row">
+      <div class="glass-card"><h3>Users</h3><p>1,250</p></div>
+      <div class="glass-card"><h3>Revenue</h3><p>$4,500</p></div>
+      <div class="glass-card"><h3>Alerts</h3><p>3 New</p></div>
+    </div>
   </main>
 </div>
